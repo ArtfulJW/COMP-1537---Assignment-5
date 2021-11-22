@@ -1,16 +1,33 @@
 // Require
+/* 
+npm install express
+npm install express-session
+npm install jsdom
+npm install mysql2
+download XAMPP
+*/
 const express = require("express");
 const fs = require("fs");
 const app = express();
 
-app.use('/js', express.static('./public/js'));
-app.use('/css', express.static('./public/css'));
+// https://www.npmjs.com/package/jsdom
+const { JSDOM } = require('jsdom');
+
+// just like a simple web server like Apache web server
+app.use('/js', express.static('static/js'));
+app.use('/css', express.static('static/css'));
+
 
 // Go to http://localhost:8000
+// Basic GET method Route
 app.get('/', function(req,res){
-    console.log("Hello World");
-    let doc = fs.readFileSync("./app/index.html", "utf-8");
+    console.log("What's going on!!!!");
+    let doc = fs.readFileSync("./static/html/index.html", "utf-8");
     res.send(doc);
+
+    // Basic 
+    //res.send("Hello World!");
+
 })
 
 function init(){
