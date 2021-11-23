@@ -6,6 +6,27 @@
     "mysql2": "^2.3.3",
     "node": "^17.1.0",
     "node.js": "^0.0.1-security",
-    "nodejs": "^0.0.0"
-  }
+    "nodejs": "^0.0.0",
+    "nodemon": "^2.0.15"
+  },
+  "name": "express-test-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArtfulJW/COMP-1537---Assignment-5.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArtfulJW/COMP-1537---Assignment-5/issues"
+  },
+  "homepage": "https://github.com/ArtfulJW/COMP-1537---Assignment-5#readme",
+  "description": ""
 }

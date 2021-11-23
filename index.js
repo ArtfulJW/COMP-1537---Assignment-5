@@ -21,12 +21,12 @@ app.use('/css', express.static('static/css'));
 // Go to http://localhost:8000
 // Basic GET method Route
 app.get('/', function(req,res){
-    console.log("What's going on!!!!");
-    let doc = fs.readFileSync("./static/html/index.html", "utf-8");
-    res.send(doc);
+    // console.log("What's going on!!!!");
+    // let doc = fs.readFileSync("./static/html/index.html", "utf-8");
+    // res.send(doc);
 
     // Basic 
-    //res.send("Hello World!");
+    res.send("Hello World");
 
 })
 
