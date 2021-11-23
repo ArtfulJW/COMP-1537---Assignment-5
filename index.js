@@ -8,14 +8,18 @@ download XAMPP
 */
 const express = require("express");
 const fs = require("fs");
+const path = require("path");
 const app = express();
 
 // https://www.npmjs.com/package/jsdom
 const { JSDOM } = require('jsdom');
 
+// Set Static Folder
+app.use(express.static(path.join(__dirname,'static')));
+
 // just like a simple web server like Apache web server
-app.use('/js', express.static('static/js'));
-app.use('/css', express.static('static/css'));
+// app.use('/js', express.static('static/js'));
+// app.use('/css', express.static('static/css'));
 
 
 // Go to http://localhost:8000
