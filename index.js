@@ -15,22 +15,23 @@ const app = express();
 const { JSDOM } = require('jsdom');
 
 // Set Static Folder
-app.use(express.static(path.join(__dirname,'static')));
+//app.use(express.static(path.join(__dirname,'static')));
 
 // just like a simple web server like Apache web server
-// app.use('/js', express.static('static/js'));
-// app.use('/css', express.static('static/css'));
-
+app.use('/js', express.static('static/js'));
+app.use('/css', express.static('static/css'));
+app.use('/html', express.static('static/html'));
 
 // Go to http://localhost:8000
 // Basic GET method Route
 app.get('/', function(req,res){
     // console.log("What's going on!!!!");
-    // let doc = fs.readFileSync("./static/html/index.html", "utf-8");
-    // res.send(doc);
 
     // Basic 
-    res.send("Hello World");
+    // res.send("Hello World");
+
+    let doc = fs.readFileSync('./static/html/index.html', "utf8");
+    res.send(doc);
 
 })
 
